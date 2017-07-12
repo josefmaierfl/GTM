@@ -4,7 +4,7 @@ Interface for Ground Truth Matches (GTM) to test vision based algorithms.
 ## Description
 Feature matching quality strongly influences the accuracy of most computer vision tasks. This led to impressive advances in keypoint detection, descriptor calculation, and feature matching itself. To compare different approaches and evaluate their quality, datasets from related tasks are used (KITTI, Oxford (Mikolajczyk et al.), HCI Training 1K, ...). Unfortunately, none of these datasets actually provide ground truth (GT) feature matches. Thus, matches can only be approximated due to repeatability errors of keypoint detectors and inaccuracies of GT. Here, we introduce ground truth matches (GTM) for several well known datasets. Based on the provided spacial ground truth, we automatically generated them using popular feature types. 
 
-Further information can be found in our paper: [1][1]
+Further information can be found in our paper: [1](https://github.com/josefmaierfl/GTM/blob/master/README.md#citation)
 
 Currently, we provide GTM for 
 * KITTI 2015 flow & disparity (http://www.cvlibs.net/datasets/kitti/)
