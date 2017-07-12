@@ -21,20 +21,37 @@ The GTM of the above mentioned datasets are available for the following keypoint
 
 For each dataset-keypoint combination, GTMs are available for various inlier ratios ranging from 1% to 100% (1, 2, ..., 10, 12, ..., 20, 25, ..., 100). For testing without a specific inlier ratio, data with the maximum possible (depends on the images and keypoint type) number of true feature matches and true negatives (keypoints without a match in the other image) is also available.
 
+The provided code provides functionalities to read and display the Ground Truth Matches. After reading, the information of the GTM-files is stored in the OpenCV format for matches and keypoints (cv::DMatch and cv::KeyPoint). Moreover the following information is available for each corresponding image pair:
+* Left inlier mask (`std::vector<bool>`)
+* Matches (`std::vector <cv::DMatch>`)
+* Left keypoints (`std::vector <cv::KeyPoint>`)
+* Right keypoints (`std::vector <cv::KeyPoint>`)
+* Left inlier ratio (`double`)
+* Right inlier ratio (`double`)
+* Average inlier ratio of both images (`double`)
+* Number of true positive matches (`double`)
+* Number of negatives in the left image (`double`)
+* Number of negatives in the right image (`double`)
+* Estimated threshold for generating GTM (`double`)
+
 ### Naming Convention for GTM Files
 Using a specific inlier ratio:
 
-`[dataset image 1]_[dataset imgage 2]_inlRat[inlier ratio in percent multiplied by 10][keypoint type].gtm`
+`[dataset image 1]_[dataset image 2]_inlRat[inlier ratio in percent multiplied by 10][keypoint type].gtm`
 
 Without a specific inlier ratio: 
 
-`[dataset image 1]_[dataset imgage 2]_inlRatInitial[keypoint type].gtm`
+`[dataset image 1]_[dataset image 2]_inlRatInitial[keypoint type].gtm`
 
 ### GTM Download
 http://www.vitro-testing.com/test-data/gtm
 
 ### Using the Code
+The project provides functionalities to read and display the GTM of multiple corresponding images and GTM-files. By providing the path to the images and GTM files in addition to the prefix and/or postfix of the image names and GTM file names, the GTM of all image pairs within the specified folders are displayed.
 
+To test 
+
+If only the core functionality of reading GTM files is desired, the header file [inlude/readGTM.h](inlude/readGTM.h) can be included in your own code.
 
 ## Platform
 The project was tested under Linux and Windows (Visual Studio 2015)
