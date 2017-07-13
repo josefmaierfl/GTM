@@ -46,17 +46,23 @@ Without a specific inlier ratio:
 ### GTM Download
 http://www.vitro-testing.com/test-data/gtm
 
-### Using the Code
+## Using the Code
 The project provides functionalities to read and display the GTM of multiple corresponding images and GTM-files. By providing the path to the images and GTM files in addition to the prefix and/or postfix of the image names and GTM file names, the GTM of all image pairs within the specified folders are displayed.
 
-To display the different options for reading and displaying GTM, use the option -h in cunjuction with the compiled executable.
+To show the different options for reading and displaying GTM, use the option -h in cunjuction with the compiled executable.
 
-To test 
+For testing, this repository includes a few sample image pairs from KITTI and Oxford datasets with their corresponding GTM in the folder [data](data). For testing, use one of the following command arguments:
+* KITTI disparity image pairs with GTM, AKAZE keypoints, and an inlier ratio of 75%:  
+`--img_path=YOURPATH/data/KITTI/imgs/ --l_img_pref=/image_2/*_10 --r_img_pref=/image_3/*_10 --gtm_path=YOURPATH/data/KITTI/GTMs/disp --gtm_postf=/*750AKAZE`
+* KITTI flow image pairs with GTM, AKAZE keypoints, and an inlier ratio of 75%:  
+`--img_path=YOURPATH/data/KITTI/imgs/image_2/ --l_img_pref=*_10 --r_img_pref=*_11 --gtm_path=YOURPATH/data/KITTI/GTMs/flow --gtm_postf=/*750AKAZE`
+* Oxford wall image pair with GTM, FAST keypoints, and an inlier ratio of 50%:  
+`--img_path=YOURPATH/data/Oxford-wall/imgs --l_img_pref=img1 --r_img_pref=img2 --gtm_path=YOURPATH/data/Oxford-wall/GTMs --gtm_postf=img1_img2_inlRat500FAST`
 
 If only the core functionality of reading GTM files is desired, the header file [include/readGTM.h](include/readGTM.h) can be included in your own code.
 
 ## Platform
-The project was tested under Linux and Windows (Visual Studio 2015)
+This cmake project was tested under Linux and Windows (Visual Studio 2015)
 
 ## Dependencies
 OpenCV 3.2
