@@ -21,7 +21,7 @@ The GTM of the above mentioned datasets are available for the following keypoint
 
 For each dataset-keypoint combination, GTMs are available for various inlier ratios ranging from 1% to 100% (1, 2, ..., 10, 12, ..., 20, 25, ..., 100). For testing without a specific inlier ratio, data with the maximum possible (depends on the images and keypoint type) number of true feature matches and true negatives (keypoints without a match in the other image) is also available.
 
-The provided code provides functionalities to read and display the Ground Truth Matches. After reading, the information of the GTM-files is stored in the OpenCV format for matches and keypoints (cv::DMatch and cv::KeyPoint). Moreover the following information is available for each corresponding image pair:
+The provided code provides functionalities to read and display the Ground Truth Matches. After reading, the information of the GTM-files is stored in the OpenCV format for matches and keypoints (cv::DMatch and cv::KeyPoint). Moreover, the following information is available for each corresponding image pair:
 * Left inlier mask (`std::vector<bool>`)
 * Matches (`std::vector <cv::DMatch>`)
 * Left keypoints (`std::vector <cv::KeyPoint>`)
@@ -30,8 +30,8 @@ The provided code provides functionalities to read and display the Ground Truth 
 * Right inlier ratio (`double`)
 * Average inlier ratio of both images (`double`)
 * Number of true positive matches (`double`)
-* Number of negatives in the left image (`double`)
-* Number of negatives in the right image (`double`)
+* Number of true negatives in the left image (`double`)
+* Number of true negatives in the right image (`double`)
 * Estimated threshold for generating GTM (`double`)
 
 ### Naming Convention for GTM Files
