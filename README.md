@@ -36,13 +36,13 @@ The provided code provides functionalities to read and display the Ground Truth 
 
 ### Naming Convention for GTM Files
 Using a specific inlier ratio:
-
-`[dataset image 1]_[dataset image 2]_inlRat[inlier ratio in percent multiplied by 10][keypoint type].gtm`
-
+```
+[dataset image 1]_[dataset image 2]_inlRat[inlier ratio in percent multiplied by 10][keypoint type].gtm
+```
 Without a specific inlier ratio: 
-
-`[dataset image 1]_[dataset image 2]_inlRatInitial[keypoint type].gtm`
-
+```
+[dataset image 1]_[dataset image 2]_inlRatInitial[keypoint type].gtm
+```
 ### GTM Download
 http://www.vitro-testing.com/test-data/gtm
 
@@ -60,12 +60,18 @@ The project provides functionalities to read and display the GTM of multiple cor
 To show the different options for reading and displaying GTM, use the option `-h` in cunjuction with the compiled executable.
 
 For testing, this repository includes a few sample image pairs from KITTI and Oxford datasets with their corresponding GTM in the folder [data](data). For testing, use one of the following command arguments:
-* KITTI disparity image pairs with GTM, AKAZE keypoints, and an inlier ratio of 75%:  
-`--img_path=YOURPATH/data/KITTI/imgs/ --l_img_pref=/image_2/*_10 --r_img_pref=/image_3/*_10 --gtm_path=YOURPATH/data/KITTI/GTMs/disp --gtm_postf=/*750AKAZE`
-* KITTI flow image pairs with GTM, AKAZE keypoints, and an inlier ratio of 75%:  
-`--img_path=YOURPATH/data/KITTI/imgs/image_2/ --l_img_pref=*_10 --r_img_pref=*_11 --gtm_path=YOURPATH/data/KITTI/GTMs/flow --gtm_postf=/*750AKAZE`
+* KITTI disparity image pairs with GTM, AKAZE keypoints, and an inlier ratio of 75%:  
+```
+--img_path=YOURPATH/data/KITTI/imgs/ --l_img_pref=/image_2/*_10 --r_img_pref=/image_3/*_10 --gtm_path=YOURPATH/data/KITTI/GTMs/disp --gtm_postf=/*750AKAZE
+```
+* KITTI flow image pairs with GTM, AKAZE keypoints, and an inlier ratio of 75%:
+```
+--img_path=YOURPATH/data/KITTI/imgs/image_2/ --l_img_pref=*_10 --r_img_pref=*_11 --gtm_path=YOURPATH/data/KITTI/GTMs/flow --gtm_postf=/*750AKAZE
+```
 * Oxford wall image pair with GTM, FAST keypoints, and an inlier ratio of 50%:  
-`--img_path=YOURPATH/data/Oxford-wall/imgs --l_img_pref=img1 --r_img_pref=img2 --gtm_path=YOURPATH/data/Oxford-wall/GTMs --gtm_postf=img1_img2_inlRat500FAST`
+```
+--img_path=YOURPATH/data/Oxford-wall/imgs --l_img_pref=img1 --r_img_pref=img2 --gtm_path=YOURPATH/data/Oxford-wall/GTMs --gtm_postf=img1_img2_inlRat500FAST
+```
 
 ### Compile and run the examples for Linux:
 ```
