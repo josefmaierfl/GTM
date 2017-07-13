@@ -49,7 +49,7 @@ http://www.vitro-testing.com/test-data/gtm
 ## Using the Code
 The project provides functionalities to read and display the GTM of multiple corresponding images and GTM-files. By providing the path to the images and GTM files in addition to the prefix and/or postfix of the image names and GTM file names, the GTM of all image pairs within the specified folders are displayed.
 
-To show the different options for reading and displaying GTM, use the option -h in cunjuction with the compiled executable.
+To show the different options for reading and displaying GTM, use the option `-h` in cunjuction with the compiled executable.
 
 For testing, this repository includes a few sample image pairs from KITTI and Oxford datasets with their corresponding GTM in the folder [data](data). For testing, use one of the following command arguments:
 * KITTI disparity image pairs with GTM, AKAZE keypoints, and an inlier ratio of 75%:  
@@ -59,7 +59,7 @@ For testing, this repository includes a few sample image pairs from KITTI and Ox
 * Oxford wall image pair with GTM, FAST keypoints, and an inlier ratio of 50%:  
 `--img_path=YOURPATH/data/Oxford-wall/imgs --l_img_pref=img1 --r_img_pref=img2 --gtm_path=YOURPATH/data/Oxford-wall/GTMs --gtm_postf=img1_img2_inlRat500FAST`
 
-If only the core functionality of reading GTM files is desired, the header file [include/readGTM.h](include/readGTM.h) can be included in your own code.
+**If only the core functionality of reading GTM files is desired, the header file [include/readGTM.h](include/readGTM.h) can be included in your own code.**
 
 ## Platform
 This cmake project was tested under Linux and Windows (Visual Studio 2015)
