@@ -101,4 +101,4 @@ make
 ## Citation
 If you use our test data please cite: 
 
-[1]: J. Maier, M. Humenberger, O. Zendel, M. Vincze. Ground Truth Accuracy and Performance of the Matching Pipeline. In IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPR Workshops), 2017
+[[1]](http://openaccess.thecvf.com/content_cvpr_2017_workshops/w10/papers/Maier_Ground_Truth_Accuracy_CVPR_2017_paper.pdf): J. Maier, M. Humenberger, O. Zendel, M. Vincze. Ground Truth Accuracy and Performance of the Matching Pipeline. In IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPR Workshops), 2017
